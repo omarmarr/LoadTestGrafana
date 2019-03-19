@@ -2,7 +2,7 @@ version: '3.3'
 services:
   influxdb:
     build: influxdb
-    env_file: configuration.env
+    env_file: influxconfiguration.env
     ports:
       - '8086:8086'
     volumes:
@@ -24,7 +24,7 @@ services:
  
   grafana:
     build: grafana/grafana
-    env_file: configuration.env
+    env_file: grafanaconfiguration.env
     ports:
       - '3000:3000'
     volumes:
